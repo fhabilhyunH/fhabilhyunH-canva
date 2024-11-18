@@ -1,0 +1,317 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 0px 6px 20px -4px rgba(64, 87, 109, .3);
+    width: 110%;
+    z-index: 100;
+}
+.navbar .left-section {
+    display: flex;
+    align-items: center;
+}
+.navbar .left-section .logo img {
+    margin-left: -120px;
+}
+.navbar .left-section .menu {
+    margin-left: -30px;
+}
+.navbar .left-section .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    position: relative;
+    margin: 0 10px;
+    padding: 12px;
+    border-radius: 6px;
+}
+.navbar .left-section .menu a:hover {
+    background-color: #f0f0f0;
+}
+.navbar .left-section .menu a::after {
+    content: '\f0d7';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+}
+.navbar .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar .right-section .button {
+    background-color: #8A3FFC;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.navbar .right-section .button:hover {
+    background-color: #5d00e7;
+    transition: .3s ease;
+}
+.navbar .right-section .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(images/profil.png);
+    background-size: cover;
+    background-position: center;
+    list-style: none;
+}
+.navbar .right-section .icon a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 11px 10px 5px 10px;
+    border-radius: 6px;
+    margin-left: -4px;
+}
+.navbar .right-section .icon a:hover {
+    background: #f0f0f0;
+}
+
+/* content */
+.content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #e5c6ff,#ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #a6beff);
+    height: 600px;
+    margin-top: 100px;
+    width: 95%;
+    border-radius: 20px;
+}
+.content .items {
+    text-align: center;
+}
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+h1 span {
+    color: #3b82f6;
+    font-weight: bold;
+}
+h1 span:nth-child(2) {
+    color: #8b5cf6;
+}
+.one {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 70px;
+}
+.search-box {
+    margin: 20px auto;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+.search-box:hover {
+    border: 1px solid black;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 1px;
+    font-size: 16px;
+}
+.search-box i {
+    color: #666;
+    margin-right: 10px;
+}
+.two {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: -20px;
+}
+.suggestions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.suggestion {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+.suggestion:hover {
+    background: #f2f2f2;
+}
+.suggestion i {
+    margin-right: 5px;
+}
+.suggestion.green i {
+    color: #10b981;
+}
+.suggestion.purple i {
+    color: #8b5cf6;
+}
+.suggestion.orange i {
+    color: #f59e0b;
+}
+.suggestion.red i {
+    color: #ef4444;
+}
+.suggestion.blue i {
+    color: #3b82f6;
+}
+.suggestion.crown i {
+    color: #fbbf24;
+}
+.suggestion.dollar i {
+    color: #10b981;
+}
+
+/* column top*/
+.column {
+    position: relative;
+    width: 95%;
+}
+.column .title {
+    width: 100%;
+    margin-bottom: 16px;
+    margin-top: 50px;
+}
+.column .column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px 0;
+    margin-bottom: 64px;
+}
+.column .column-grid .card {
+    display: flex;
+    padding: 8px;
+    border-radius: 10px;
+    width: 85%;
+    cursor: pointer;
+}
+.column .column-grid .card .icon {
+    display: flex;
+    justify-content: end;
+}
+.column .column-grid .card:hover {
+    background-color: rgb(236, 236, 236);
+}
+.column .column-grid .card .icon .background {
+    display: flex;
+    height: 48px;
+    width: 48px;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(231, 231, 231);
+    border-radius: 6px;
+}
+.column .column-grid .card .background svg {
+    fill: #8b3dff;
+}
+.column .column-grid .card .text h4 {
+    margin-bottom: 13px;
+    font-size: 15px;
+    max-width: 250px;
+}
+.column .column-grid .card .text p {
+    font-size: 15px;
+    color: #414141;
+    max-width: 250px;
+}
+
+/* column bottom */
+.bottom {
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.bottom .place {
+    display: flex;
+    max-width: 350px;
+    align-items: center;
+    gap: 15px;
+}
+.bottom .place .text p {
+    font-size: 14px;
+}
+.bottom .place .text h4 {
+    margin-bottom: 10px;
+}
+.bottom .place .text p a {
+    text-decoration: underline;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 32px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    position: relative;
+}
+.footer footer {
+    display: flex;
+    text-align: center;
+}
+.footer  footer .text {
+    margin: 5px 0;
+    color: #666666;
+    font-size: 15px;
+}
+.footer footer .text a {
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer footer .text a:hover {
+    color: #8b3dff;
+}
+.footer footer .icon {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+.footer footer .icon a {
+    margin: 0 5px;
+    font-size: 20px;
+}
